@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js";</script>
+<title>Legalflow — Verdedigbare juridische werkproducten, in jouw Claude</title>
+<meta name="description" content="Legalflow bouwt het juridische werkproduct en verifieert daarna elke citatie tegen de bron — een memo plus een citatie-verificatierapport dat je durft te ondertekenen. In je eigen Claude, op je eigen dossiers. Niets verlaat je omgeving.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legalflow — verdedigbaar juridisch werk, in jouw Claude">
+<meta property="og:description" content="Elke voetnoot geverifieerd. Een memo plus een verificatierapport, gedraaid in je eigen Claude. Je dossiers blijven bij jou.">
+<meta property="og:locale" content="nl_NL">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Legalflow — home"><span class="dot" aria-hidden="true"></span>Legalflow</a>
+    <nav class="nav-links" aria-label="Hoofdmenu">
+      <a href="#werkwijze">Hoe het werkt</a>
+      <a href="#gate">De gate</a>
+      <a href="#bewijs">Bewijs</a>
+      <a href="#vertrouwelijkheid">Vertrouwelijkheid</a>
+      <a href="#installeren">Installeren</a>
+      <a class="btn btn-primary" href="#demo">Boek een demo <span class="arr" aria-hidden="true">→</span></a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero wrap" aria-labelledby="hero-h">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Een juridische upgrade voor je eigen Claude</span>
+      <h1 id="hero-h">Een memo waarvan <em>elke voetnoot</em> is gecontroleerd.</h1>
+      <p class="lead">Je gebruikt Claude al. Legalflow maakt er een verdedigbaar juridisch instrument van — het bouwt het werkproduct en verifieert daarna elke voetnoot tegen de bron. Een memo plus een verificatierapport dat je durft te ondertekenen, in je eigen Claude, op je eigen dossiers.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#demo">Boek een demo <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#bewijs">Bekijk een voorbeeldmemo</a>
+      </div>
+      <div class="hero-trust">
+        <span class="tick">✓ 31 voetnoten getoetst · 0 mismatch</span>
+        <span>Je dossiers blijven bij jou</span>
+        <span>NOvA-verificatieplicht beantwoord</span>
+      </div>
+    </div>
+
+    <!-- Held element: the verification artifact -->
+    <div class="hero-art">
+      <figure class="artifact" data-animate aria-label="Citatie-verificatierapport (voorbeeld)">
+        <div class="artifact-bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="ttl mono">citatie-verificatierapport · verify_citations</span>
+        </div>
+        <div class="artifact-body">
+          <p class="artifact-q">Mag een Nederlands bedrijf persoonsgegevens van EU-betrokkenen doorgeven aan een cloudverwerker in de VS — en onder welke voorwaarden?</p>
+          <div class="cites">
+            <div class="cite" data-state="claim" data-result="unconf">
+              <span class="num">01</span><span class="id">CELEX:32016R0679 — AVG art. 44</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+            <div class="cite" data-state="claim" data-result="ok">
+              <span class="num">02</span><span class="id">ECLI:EU:C:2020:559 — Schrems II, r.o. 83-89</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+            <div class="cite" data-state="claim" data-result="ok">
+              <span class="num">07</span><span class="id">CELEX:32023D1795 — DPF-besluit, overw. 7-12</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+            <div class="cite" data-state="claim" data-result="ok">
+              <span class="num">13</span><span class="id">Schrems II, r.o. 134 — aanvullende maatregelen</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+            <div class="cite" data-state="claim" data-result="unconf">
+              <span class="num">30</span><span class="id">AVG art. 28 — verwerkersovereenkomst</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+            <div class="cite" data-state="claim" data-result="ok">
+              <span class="num">31</span><span class="id">CELEX:32021D0914 — SCC's, Clausule 14</span>
+              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
+            </div>
+          </div>
+          <figcaption class="artifact-foot reveal">
+            <span class="gate-metrics">
+              <span><b>22</b> ok</span><span><b>9</b> onbevestigd</span><span><b>0</b> mismatch</span>
+            </span>
+            <span class="gate-decision"><span class="mk" aria-hidden="true">✓</span> GATE: DOOR</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================== PROBLEEM ============================== -->
+<section class="problem wrap" aria-labelledby="prob-h">
+  <div class="section-head reveal">
+    <span class="eyebrow">Het probleem</span>
+    <h2 id="prob-h">AI schrijft snel. Maar jíj zet je naam onder de bronnen.</h2>
+  </div>
+  <div class="cols-3">
+    <article class="card reveal">
+      <span class="idx">01</span>
+      <h3>Generieke AI verzint citaten</h3>
+      <p>Zelfs juridische tools hallucineren in <span class="figure">17–33%</span> van de antwoorden. Eén verzonnen arrest diskwalificeert het hele stuk — en je reputatie eraan vast.</p>
+    </article>
+    <article class="card reveal" data-delay="80">
+      <span class="idx">02</span>
+      <h3>De verificatieplicht is hard</h3>
+      <p>Sinds eind 2025 moet elke citatie handmatig worden gecontroleerd en de bron vermeld (NOvA). AI zonder verifieerbare bronvermelding is niet verdedigbaar.</p>
+    </article>
+    <article class="card reveal" data-delay="160">
+      <span class="idx">03</span>
+      <h3>Je data mag niet naar publieke AI</h3>
+      <p>Beroepsgeheim. Vertrouwelijke dossiers horen niet in een stack die je niet beheerst en die je cliëntgegevens door derden haalt.</p>
+    </article>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================== WERKWIJZE / PIPELINE ============================== -->
+<section id="werkwijze" class="tint" aria-labelledby="werk-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hoe het werkt</span>
+      <h2 id="werk-h">Geen black box. Een zichtbaar stappenplan.</h2>
+      <p>Eén juridische vraag erin. Je volgt live wat er gebeurt — en aan het eind staat er een verdedigbaar bestand, geen chatlog. De citatie-verificatie is de hero-stap.</p>
+    </div>
+    <div class="pipe reveal">
+      <div class="phase"><span class="pno">FASE 0</span><h3>Intake</h3><p>Detecteert het rechtsgebied en bouwt de bronnenconfiguratie.</p><div class="fan" aria-hidden="true"><i></i></div></div>
+      <div class="phase"><span class="pno">FASE 1</span><h3>Kennischeck</h3><p>Is het cruciale bronmateriaal aanwezig? Anders: terug.</p><div class="fan" aria-hidden="true"><i></i></div></div>
+      <div class="phase fanout"><span class="pno">FASE 2</span><h3>Parallel onderzoek</h3><p>Meerdere subagents tegelijk, elk een bronlaag, evidence-block per bron.</p><div class="fan" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+      <div class="phase"><span class="pno">FASE 3</span><h3>Tegenspraak</h3><p>Drie skeptici bestrijden de conclusie vóór er iets op papier staat.</p><div class="fan" aria-hidden="true"><i></i></div></div>
+      <div class="phase hero-step"><span class="tag">de gate</span><span class="pno">FASE 4</span><h3>Citatie­verificatie</h3><p>Elke voetnoot deterministisch getoetst tegen de bron.</p><div class="fan" aria-hidden="true"><i></i></div></div>
+      <div class="phase"><span class="pno">FASE 5 · 6</span><h3>DOCX &amp; review</h3><p>Echte Word-voetnoten, gehard. Drie reviewers + completeness-critic.</p><div class="fan" aria-hidden="true"><i></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DE GATE ============================== -->
+<section id="gate" class="wrap" aria-labelledby="gate-h">
+  <div class="section-head reveal">
+    <span class="eyebrow">Het hart van het product</span>
+    <h2 id="gate-h">De citatie-verificatiegate.</h2>
+    <p>Elke voetnoot gaat door een deterministische controle. Drie statussen — en één beslisregel die oplevering kan blokkeren. Geen LLM die zichzelf beoordeelt: een identifier- en verbatim-match.</p>
+  </div>
+  <div class="gate-wrap">
+    <div class="status-list">
+      <article class="status ok reveal">
+        <span class="badge">✓ ok</span>
+        <div><h3>Inhoudelijk gedekt</h3><p>Claimdragende bron — jurisprudentie, guidance, Commissiebesluit. De identifier bestaat én de verbatim-passage is in de opgehaalde bron aangetroffen. De bewering wordt gedekt.</p></div>
+      </article>
+      <article class="status unconf reveal" data-delay="80">
+        <span class="badge">◻ onbevestigd</span>
+        <div><h3>Primaire wetgeving</h3><p>Wetsartikelen en overwegingen, rechtstreeks opgehaald via de zoeklaag. De gate doet hier bewust géén claimtoets. <strong>Niet onjuist — wél eerlijk</strong> over wat niet onafhankelijk is gecontroleerd.</p></div>
+      </article>
+      <article class="status mismatch reveal" data-delay="160">
+        <span class="badge">✕ mismatch</span>
+        <div><h3>Blokkeert oplevering</h3><p>De identifier bestaat niet in het arsenaal, óf de passage staat niet in de bron. Een mismatch houdt het stuk tegen tot correctie. In deze run: nul.</p></div>
+      </article>
+    </div>
+
+    <aside class="gate-aside reveal" data-delay="120">
+      <div class="gate-card">
+        <div class="gh">resultaat — GDPR-doorgifte VS (Schrems II)</div>
+        <div class="gnums">
+          <div class="gn"><div class="v">31</div><div class="k">voetnoten getoetst</div></div>
+          <div class="gn"><div class="v zero">0</div><div class="k">mismatch</div></div>
+          <div class="gn"><div class="v">22</div><div class="k">ok — inhoudelijk gedekt</div></div>
+          <div class="gn"><div class="v">9</div><div class="k">onbevestigd — wetgeving</div></div>
+        </div>
+        <div class="gate-rule">
+          beslisregel (deterministisch):<br>
+          0 mismatch → <span class="go">DOOR</span><br>
+          1–3 → corrigeer<br>
+          ≥4 → terug naar onderzoek
+        </div>
+        <div class="gate-final">
+          <span class="lbl">gate-beslissing</span>
+          <span class="dec"><span aria-hidden="true">✓</span> DOOR</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================== BEWIJS ============================== -->
+<section id="bewijs" class="wrap" aria-labelledby="bew-h">
+  <div class="section-head reveal">
+    <span class="eyebrow">Het bewijs</span>
+    <h2 id="bew-h">Bekijk het bewijs zelf.</h2>
+    <p>Echte output van een neutrale rechtsvraag — grensoverschrijdende gegevensdoorgifte onder Schrems II. Geen mockup, geen cliëntdata.</p>
+  </div>
+  <div class="cols-3">
+    <article class="card proof-card reveal">
+      <span class="doc-ico" aria-hidden="true">¶</span>
+      <span class="ftype">PDF · DOCX</span>
+      <h3>Voorbeeldmemo</h3>
+      <p>31 geverifieerde voetnoten, Word-native. Opent zonder reparatie; te redigeren en te ondertekenen.</p>
+      <a class="dl" href="#demo" data-proof="memo">Download memo <span class="arr" aria-hidden="true">↓</span></a>
+    </article>
+    <article class="card proof-card reveal" data-delay="80">
+      <span class="doc-ico" aria-hidden="true">✓</span>
+      <span class="ftype">PDF</span>
+      <h3>Citatie-verificatierapport</h3>
+      <p>Per voetnoot: identifier, status, citaat. 0 mismatch · 22 ok · 9 onbevestigd → door. De bijlage die een partner wil zien.</p>
+      <a class="dl" href="#demo" data-proof="rapport">Download rapport <span class="arr" aria-hidden="true">↓</span></a>
+    </article>
+    <article class="card proof-card reveal" data-delay="160">
+      <span class="doc-ico" aria-hidden="true">»</span>
+      <span class="ftype">Transcript</span>
+      <h3>De zichtbare run</h3>
+      <p>Stappenplan → parallelle subagents → de gate → DOCX. Lees na hoe het werkproduct tot stand kwam.</p>
+      <a class="dl" href="#demo" data-proof="transcript">Bekijk transcript <span class="arr" aria-hidden="true">→</span></a>
+    </article>
+  </div>
+  <p class="proof-note"><span aria-hidden="true">⚖</span> Geen juridisch advies — werkproduct ter beoordeling door een bevoegd jurist.</p>
+</section>
+
+<hr class="rule">
+
+<!-- ============================== VERTROUWELIJKHEID ============================== -->
+<section id="vertrouwelijkheid" class="tint" aria-labelledby="conf-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Vertrouwelijkheid &amp; verdedigbaarheid</span>
+      <h2 id="conf-h">Verdedigbaar. En het verlaat je omgeving niet.</h2>
+    </div>
+    <div class="conf-grid reveal">
+      <div class="conf"><span class="k">01 · in je eigen Claude</span><h3>Geen API-key, geen developer-werk</h3><p>De connector draait in jouw Claude-omgeving. Je vraag en je stukken blijven bij jou; je bestaande Claude-abonnement betaalt de inference.</p></div>
+      <div class="conf"><span class="k">02 · server-side verificatie</span><h3>Jouw data passeert onze tools niet</h3><p>De zoeklaag en de gate zijn onze server-side tools. Ze leveren de geverifieerde laag — ze zien je dossiers niet.</p></div>
+      <div class="conf"><span class="k">03 · audit-trail</span><h3>Per voetnoot vastgelegd wat is gecontroleerd</h3><p>Het citatierapport en de query-log documenteren de verificatie. Dat is wat een partner of toezichthouder wil zien — niet “de AI zei het”.</p></div>
+      <div class="conf"><span class="k">04 · NOvA beantwoord</span><h3>Verificatie en bronvermelding ingebouwd</h3><p>De verificatieplicht is geen handmatige nacontrole maar onderdeel van de pipeline. Verdedigbaarheid by design.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== INSTALL FUNNEL ============================== -->
+<section id="installeren" class="install" aria-labelledby="inst-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Installeren</span>
+      <h2 id="inst-h">Van rechtsvraag naar geverifieerde memo — in je eigen Claude.</h2>
+      <p>Eén keer koppelen, daarna stel je gewoon je rechtsvraag en rolt er een verdedigbare memo uit. Installeren vraagt altijd jóuw bevestiging — geen software glipt ongevraagd je Claude in. Kies je omgeving:</p>
+    </div>
+    <div class="steps">
+      <article class="step reveal">
+        <span class="sno"><b>A</b> Claude Code <em>— wrijvingsloos</em></span>
+        <h3>Twee commando's, klaar</h3>
+        <p>Plak deze twee regels in Claude Code. De connector vraagt automatisch om <b>“Autoriseren”</b> → voer je toegangscode in (krijg je bij onboarding). Daarna draait <span class="mono">legalflow-memo</span>.</p>
+        <div class="copy-row">
+          <button class="btn btn-copy" type="button"
+                  data-copy="/plugin marketplace add Lennardvanmierlo/legalflow-plugin&#10;/plugin install legalflow@legalflow"
+                  data-copied="Gekopieerd ✓">
+            <span class="copy-label">Kopieer install-commando's</span> <span class="arr" aria-hidden="true">⧉</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="step reveal" data-delay="90">
+        <span class="sno"><b>B</b> Cowork (desktop-app)</span>
+        <h3>Connector toevoegen + autoriseren</h3>
+        <p>Open Claude → <b>Instellingen → Connectors → Connector toevoegen</b>, plak de URL hieronder, klik <b>Verbinden → Autoriseren</b> en voer je toegangscode in. Voeg daarna de <span class="mono">legalflow-memo</span>-skill toe.</p>
+        <div class="copy-row">
+          <button class="btn btn-copy" type="button"
+                  data-copy="https://34-63-206-170.sslip.io/mcp"
+                  data-open="https://claude.ai"
+                  data-copied="Gekopieerd ✓">
+            <span class="copy-label">Kopieer connector-URL + open Claude</span> <span class="arr" aria-hidden="true">⧉</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="step reveal" data-delay="180">
+        <span class="sno"><b>→</b> Stel je vraag</span>
+        <h3>Zie het memo ontstaan</h3>
+        <p>Start <span class="mono">legalflow-memo</span>, stel je juridische vraag, en volg live het stappenplan, de subagents en de citatie-gate — tot de memo en het verificatierapport er staan.</p>
+        <div class="placeholder ready"><b>✓ Geen token om te beheren</b>Je data blijft in je eigen Claude-omgeving; je abonnement doet het denkwerk.</div>
+      </article>
+    </div>
+    <p class="install-foot"><span aria-hidden="true">→</span> Liever begeleiding bij de eerste run? <a href="#demo">Boek een demo</a> — dan lopen we 'm samen door, en je krijgt je toegangscode.</p>
+  </div>
+</section>
+
+<!-- ============================== VOOR WIE ============================== -->
+<section class="wrap" aria-labelledby="aud-h">
+  <div class="section-head reveal">
+    <span class="eyebrow">Voor wie</span>
+    <h2 id="aud-h">Voor werk waar je naam onder staat.</h2>
+  </div>
+  <div class="aud-list reveal">
+    <div class="aud"><span class="num">A</span><div><h3>Grote NL/EU-advocatenkantoren</h3><p>Memo's, jurisprudentie-analyses en contract-triage met een verificatierapport als bijlage — verdedigbaar tegenover wederpartij en toezichthouder.</p></div></div>
+    <div class="aud"><span class="num">B</span><div><h3>In-house legal &amp; overheidsorganisaties</h3><p>Hoog-inzet werk onder beroepsgeheim, waarbij data de eigen omgeving niet mag verlaten. Rechtsgebied-agnostisch: de intake detecteert het domein en bouwt de bronnenconfig.</p></div></div>
+    <div class="aud"><span class="num">C</span><div><h3>Kantoren met een eigen huisstijl</h3><p>Een optionele playbook-laag maakt de output op je praktijk: huisposities, risicobereidheid, voorkeursbronnen en terminologie. Leeg bij pure rechtsvragen, bepalend bij klantwerk.</p></div></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================== COMMERCIEEL / CTA ============================== -->
+<section id="demo" class="tint" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <span class="eyebrow">Een levende dienst</span>
+      <h2 id="cta-h">Geen momentopname. Een dienst die meegroeit met het recht.</h2>
+      <p class="lead">Abonnement op toegang plus doorlopende updates. De verificatie-workflows worden continu bijgewerkt tegen nieuw recht en nieuwe incidenten — je koopt geen statische prompt, maar een geverifieerde dienst.</p>
+      <div class="hero-cta">
+        <!-- WIRE-UP: vervang href door de Cal.com-boekingslink (uitvragen Lennard) -->
+        <a class="btn btn-primary" href="PLACEHOLDER_CALCOM_URL">Boek een demo <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#installeren">Bekijk hoe je het installeert</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="wrap" aria-labelledby="faq-h">
+  <div class="section-head reveal">
+    <span class="eyebrow">Veelgestelde vragen</span>
+    <h2 id="faq-h">Wat juristen het eerst vragen.</h2>
+  </div>
+  <div class="faq reveal">
+    <details class="qa"><summary>Hoe verifieert de gate een citatie?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Deterministisch, zonder LLM-oordeel: de gate controleert of de geciteerde identifier (ECLI, CELEX, guidance-ref) in het bronnenarsenaal bestaat én of de verbatim-passage in de opgehaalde bron is aangetroffen. Wel/niet gedekt is een match, geen mening.</p></div></details>
+    <details class="qa"><summary>Blijft mijn data echt bij mij?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Ja. De connector draait in je eigen Claude-omgeving; je vraag en je dossiers blijven daar. De zoeklaag en de gate zijn server-side tools die de geverifieerde laag leveren — je cliëntgegevens passeren ze niet.</p></div></details>
+    <details class="qa"><summary>Welke modellen gebruikt het?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Je eigen Claude-abonnement doet het redeneren en schrijven; daar is geen aparte API-key voor nodig. De workflows zijn op Claude getuned.</p></div></details>
+    <details class="qa"><summary>Welke rechtsgebieden worden ondersteund?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Rechtsgebied-agnostisch. De intake detecteert het domein en bouwt daaruit de bronnenconfiguratie (welke wetgeving, toezichthouders, jurisprudentie en doctrine). NL/EU-recht is de kern.</p></div></details>
+    <details class="qa"><summary>Is dit juridisch advies?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Nee. De output is een werkproduct ter beoordeling door een bevoegd jurist. Het vervangt geen inhoudelijke beoordeling door de verantwoordelijke jurist.</p></div></details>
+    <details class="qa"><summary>Wat gebeurt er als de gate een mismatch vindt?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>De oplevering wordt geblokkeerd tot correctie. De beslisregel is deterministisch: 0 mismatch → <code>door</code> · 1–3 → <code>corrigeer</code> · ≥4 → <code>terug naar onderzoek</code>.</p></div></details>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="col">
+        <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Legalflow</a>
+        <p>Verdedigbare juridische werkproducten in je eigen AI-omgeving — elke voetnoot geverifieerd, je dossiers blijven bij jou.</p>
+        <p class="disclaimer">Geen juridisch advies — werkproduct ter beoordeling door een bevoegd jurist. <em>Legalflow is een werknaam.</em></p>
+      </div>
+      <div class="col">
+        <h4>Product</h4>
+        <a href="#werkwijze">Hoe het werkt</a>
+        <a href="#gate">De gate</a>
+        <a href="#bewijs">Bewijs</a>
+        <a href="#installeren">Installeren</a>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <a href="#demo">Boek een demo</a>
+        <!-- WIRE-UP: e-mail / privacy-pagina invullen -->
+        <a href="mailto:PLACEHOLDER_CONTACT_EMAIL">E-mail</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Legalflow</span>
+      <span class="mono">Verdedigbaarheid · vertrouwelijkheid · geverifieerd</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
