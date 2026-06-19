@@ -103,9 +103,15 @@
 
   /* ---- Copy connector URL + token --------------------------------------- */
   /* PLACEHOLDER values live in data-attributes on the button (wired in Sessie B). */
-  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+  document.querySelectorAll("[data-copy], [data-copy-target]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var val = btn.getAttribute("data-copy") || "";
+      // data-copy-target: kopieer de tekst van een ander element (bv. de ingebedde skill).
+      var targetSel = btn.getAttribute("data-copy-target");
+      if (targetSel) {
+        var src = document.querySelector(targetSel);
+        if (src) val = (src.textContent || "").replace(/^\s+|\s+$/g, "");
+      }
       var done = function () {
         var label = btn.querySelector(".copy-label");
         var orig = label ? label.textContent : "";
@@ -124,9 +130,59 @@
         try { document.execCommand("copy"); } catch (e) {}
         document.body.removeChild(ta); done();
       }
-      // Open Claude in a new tab if a target is provided (wired in Sessie B).
+      // Open Claude. App-scheme (claude://) opent de desktop-app; http(s) opent een tab.
       var open = btn.getAttribute("data-open");
-      if (open && open.indexOf("PLACEHOLDER") === -1) window.open(open, "_blank", "noopener");
+      if (open && open.indexOf("PLACEHOLDER") === -1) {
+        if (/^https?:/.test(open)) {
+          window.open(open, "_blank", "noopener");
+        } else {
+          // App-scheme: probeer de desktop-app, val terug op web als 'ie niet opent.
+          var web = btn.getAttribute("data-open-web");
+          var launched = false;
+          var onBlur = function () { launched = true; };
+          window.addEventListener("blur", onBlur, { once: true });
+          if (web && web.indexOf("PLACEHOLDER") === -1) {
+            setTimeout(function () {
+              window.removeEventListener("blur", onBlur);
+              if (!launched && document.visibilityState === "visible") {
+                window.open(web, "_blank", "noopener");
+              }
+            }, 1400);
+          }
+          window.location.href = open;
+        }
+      }
+    });
+  });
+
+  /* ---- Dossier: klik slaat de map open --------------------------------- */
+  var folders = Array.prototype.slice.call(document.querySelectorAll("[data-folder]"));
+  folders.forEach(function (folder) {
+    var cover = folder.querySelector(".folder-cover");
+    if (!cover) return;
+    var goLink = folder.querySelector(".f-go");
+    var href = goLink ? goLink.getAttribute("href") : null;
+    // Voorlopig alleen de live-map (legalflow-memo): klik = openslaan + navigeren.
+    var navigates = folder.classList.contains("folder-live") && href;
+    cover.addEventListener("click", function () {
+      if (navigates) {
+        if (reduce) { window.location.href = href; return; }
+        folder.classList.add("is-open", "is-opening");
+        cover.setAttribute("aria-expanded", "true");
+        window.setTimeout(function () { window.location.href = href; }, 640);
+        return;
+      }
+      // preview-mappen: open/dicht in plaats (één tegelijk)
+      var isOpen = folder.classList.contains("is-open");
+      folders.forEach(function (f) {
+        if (f !== folder) {
+          f.classList.remove("is-open");
+          var c = f.querySelector(".folder-cover");
+          if (c) c.setAttribute("aria-expanded", "false");
+        }
+      });
+      folder.classList.toggle("is-open", !isOpen);
+      cover.setAttribute("aria-expanded", String(!isOpen));
     });
   });
 

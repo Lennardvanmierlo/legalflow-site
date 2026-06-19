@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className+=" js";</script>
 <title>Legalflow — Verdedigbare juridische werkproducten, in jouw Claude</title>
-<meta name="description" content="Legalflow bouwt het juridische werkproduct en verifieert daarna elke citatie tegen de bron — een memo plus een citatie-verificatierapport dat je durft te ondertekenen. In je eigen Claude, op je eigen dossiers. Niets verlaat je omgeving.">
+<meta name="description" content="Legalflow bouwt het juridische werkproduct en verifieert daarna elke citatie tegen de bron — een memo plus een citatie-verificatierapport dat je durft te ondertekenen. In je eigen omgeving, op je eigen dossiers. Niets verlaat je omgeving.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Legalflow — verdedigbaar juridisch werk, in jouw Claude">
@@ -23,6 +23,7 @@
       <a href="#werkwijze">Hoe het werkt</a>
       <a href="#gate">De gate</a>
       <a href="#bewijs">Bewijs</a>
+      <a href="#agents">Agents</a>
       <a href="#vertrouwelijkheid">Vertrouwelijkheid</a>
       <a href="#installeren">Installeren</a>
       <a class="btn btn-primary" href="#demo">Boek een demo <span class="arr" aria-hidden="true">→</span></a>
@@ -33,72 +34,107 @@
 
 <main id="top">
 
-<!-- ============================== HERO ============================== -->
-<section class="hero wrap" aria-labelledby="hero-h">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">Een juridische upgrade voor je eigen Claude</span>
-      <h1 id="hero-h">Een memo waarvan <em>elke voetnoot</em> is gecontroleerd.</h1>
-      <p class="lead">Je gebruikt Claude al. Legalflow maakt er een verdedigbaar juridisch instrument van — het bouwt het werkproduct en verifieert daarna elke voetnoot tegen de bron. Een memo plus een verificatierapport dat je durft te ondertekenen, in je eigen Claude, op je eigen dossiers.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#demo">Boek een demo <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#bewijs">Bekijk een voorbeeldmemo</a>
-      </div>
-      <div class="hero-trust">
-        <span class="tick">✓ 31 voetnoten getoetst · 0 mismatch</span>
-        <span>Je dossiers blijven bij jou</span>
-        <span>NOvA-verificatieplicht beantwoord</span>
-      </div>
+<!-- ============================== DOSSIER HERO ============================== -->
+<section class="dossier" id="top-hero" aria-labelledby="hero-h">
+  <div class="dossier-grid">
+    <div class="dossier-copy">
+      <h1 id="hero-h">Elke citatie<br>geverifieerd.</h1>
+      <span class="d-rule" aria-hidden="true"></span>
+      <ul class="d-values">
+        <li><span class="dv-ic" aria-hidden="true">✓</span><span class="dv-tx"><b>Geverifieerd</b><span>Elke claim gecontroleerd tegen de bron.</span></span></li>
+        <li><span class="dv-ic" aria-hidden="true">▤</span><span class="dv-tx"><b>Data bij jou</b><span>In je eigen omgeving — je dossiers blijven bij jou.</span></span></li>
+        <li><span class="dv-ic" aria-hidden="true">⛉</span><span class="dv-tx"><b>Je eigen sleutels</b><span>Je eigen abonnement voor het denkwerk, je eigen Moonlit-sleutel voor de zoeklaag — geen leverancier ertussen.</span></span></li>
+      </ul>
     </div>
-
-    <!-- Held element: the verification artifact -->
-    <div class="hero-art">
-      <figure class="artifact" data-animate aria-label="Citatie-verificatierapport (voorbeeld)">
-        <div class="artifact-bar">
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="ttl mono">citatie-verificatierapport · verify_citations</span>
-        </div>
-        <div class="artifact-body">
-          <p class="artifact-q">Mag een Nederlands bedrijf persoonsgegevens van EU-betrokkenen doorgeven aan een cloudverwerker in de VS — en onder welke voorwaarden?</p>
-          <div class="cites">
-            <div class="cite" data-state="claim" data-result="unconf">
-              <span class="num">01</span><span class="id">CELEX:32016R0679 — AVG art. 44</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-            <div class="cite" data-state="claim" data-result="ok">
-              <span class="num">02</span><span class="id">ECLI:EU:C:2020:559 — Schrems II, r.o. 83-89</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-            <div class="cite" data-state="claim" data-result="ok">
-              <span class="num">07</span><span class="id">CELEX:32023D1795 — DPF-besluit, overw. 7-12</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-            <div class="cite" data-state="claim" data-result="ok">
-              <span class="num">13</span><span class="id">Schrems II, r.o. 134 — aanvullende maatregelen</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-            <div class="cite" data-state="claim" data-result="unconf">
-              <span class="num">30</span><span class="id">AVG art. 28 — verwerkersovereenkomst</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-            <div class="cite" data-state="claim" data-result="ok">
-              <span class="num">31</span><span class="id">CELEX:32021D0914 — SCC's, Clausule 14</span>
-              <span class="st"><span class="mk" aria-hidden="true">·</span><span class="st-tx">claim</span></span>
-            </div>
-          </div>
-          <figcaption class="artifact-foot reveal">
-            <span class="gate-metrics">
-              <span><b>22</b> ok</span><span><b>9</b> onbevestigd</span><span><b>0</b> mismatch</span>
-            </span>
-            <span class="gate-decision"><span class="mk" aria-hidden="true">✓</span> GATE: DOOR</span>
-          </figcaption>
-        </div>
-      </figure>
+    <div class="dossier-rack">
+      <article class="folder folder-live is-open" data-folder>
+        <span class="folder-doc" aria-hidden="true">
+          <span class="doc-lines"></span>
+          <svg class="stamp" viewBox="0 0 116 116" aria-hidden="true" focusable="false">
+            <defs><path id="stamp-arc" d="M58,58 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
+            <circle cx="58" cy="58" r="54" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="58" cy="58" r="45" fill="none" stroke="currentColor" stroke-width="0.9"/>
+            <text class="stamp-arc-tx"><textPath href="#stamp-arc" startOffset="0">GEVERIFIEERD&#160;·&#160;GEVERIFIEERD&#160;·&#160;</textPath></text>
+            <path d="M44 59 l9 9 l20 -22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <button class="folder-cover" type="button" aria-expanded="true" aria-label="legalflow-memo — open dossier">
+          <span class="f-top"><span class="f-no mono">01</span><span class="tag">Live</span></span>
+          <span class="f-code mono">LF-MEMO-001</span>
+          <span class="f-name">legalflow-memo</span>
+          <span class="f-title">Van rechtsvraag naar verdedigbare memo</span>
+          <span class="f-foot"><span class="f-flow mono">claim → bron → voetnoot</span></span>
+        </button>
+        <a class="f-go" href="/agents/legalflow-memo/" aria-label="Open legalflow-memo-dossier"><span aria-hidden="true">→</span></a>
+        <span class="f-tab mono" aria-hidden="true">Live</span>
+      </article>
+      <article class="folder" data-folder>
+        <span class="folder-doc" aria-hidden="true">
+          <span class="doc-lines"></span>
+          <svg class="stamp" viewBox="0 0 116 116" aria-hidden="true" focusable="false">
+            <defs><path id="stamp-arc" d="M58,58 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
+            <circle cx="58" cy="58" r="54" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="58" cy="58" r="45" fill="none" stroke="currentColor" stroke-width="0.9"/>
+            <text class="stamp-arc-tx"><textPath href="#stamp-arc" startOffset="0">GEVERIFIEERD&#160;·&#160;GEVERIFIEERD&#160;·&#160;</textPath></text>
+            <path d="M44 59 l9 9 l20 -22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <button class="folder-cover" type="button" aria-expanded="false" aria-label="triage — open dossier">
+          <span class="f-top"><span class="f-no mono">02</span><span class="tag">Preview</span></span>
+          <span class="f-code mono">LF-TRIAGE-002</span>
+          <span class="f-name">triage</span>
+          <span class="f-title">Contract- & documenttriage</span>
+          <span class="f-foot"><span class="f-flow mono">risico → ontbreekt → vraag</span></span>
+        </button>
+        <a class="f-go" href="/agents/triage/" aria-label="Open triage-dossier"><span aria-hidden="true">→</span></a>
+        <span class="f-tab mono" aria-hidden="true">Preview</span>
+      </article>
+      <article class="folder" data-folder>
+        <span class="folder-doc" aria-hidden="true">
+          <span class="doc-lines"></span>
+          <svg class="stamp" viewBox="0 0 116 116" aria-hidden="true" focusable="false">
+            <defs><path id="stamp-arc" d="M58,58 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
+            <circle cx="58" cy="58" r="54" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="58" cy="58" r="45" fill="none" stroke="currentColor" stroke-width="0.9"/>
+            <text class="stamp-arc-tx"><textPath href="#stamp-arc" startOffset="0">GEVERIFIEERD&#160;·&#160;GEVERIFIEERD&#160;·&#160;</textPath></text>
+            <path d="M44 59 l9 9 l20 -22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <button class="folder-cover" type="button" aria-expanded="false" aria-label="jurisprudentie — open dossier">
+          <span class="f-top"><span class="f-no mono">03</span><span class="tag">Preview</span></span>
+          <span class="f-code mono">LF-JUR-003</span>
+          <span class="f-name">jurisprudentie</span>
+          <span class="f-title">Jurisprudentie-analyse</span>
+          <span class="f-foot"><span class="f-flow mono">uitspraak → lijn → behandeling</span></span>
+        </button>
+        <a class="f-go" href="/agents/jurisprudentie/" aria-label="Open jurisprudentie-dossier"><span aria-hidden="true">→</span></a>
+        <span class="f-tab mono" aria-hidden="true">Preview</span>
+      </article>
+      <article class="folder" data-folder>
+        <span class="folder-doc" aria-hidden="true">
+          <span class="doc-lines"></span>
+          <svg class="stamp" viewBox="0 0 116 116" aria-hidden="true" focusable="false">
+            <defs><path id="stamp-arc" d="M58,58 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
+            <circle cx="58" cy="58" r="54" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="58" cy="58" r="45" fill="none" stroke="currentColor" stroke-width="0.9"/>
+            <text class="stamp-arc-tx"><textPath href="#stamp-arc" startOffset="0">GEVERIFIEERD&#160;·&#160;GEVERIFIEERD&#160;·&#160;</textPath></text>
+            <path d="M44 59 l9 9 l20 -22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <button class="folder-cover" type="button" aria-expanded="false" aria-label="legal-council — open dossier">
+          <span class="f-top"><span class="f-no mono">04</span><span class="tag">Preview</span></span>
+          <span class="f-code mono">LF-COUNCIL-004</span>
+          <span class="f-name">legal-council</span>
+          <span class="f-title">Multi-perspectief council-review</span>
+          <span class="f-foot"><span class="f-flow mono">positie → aanval → stem</span></span>
+        </button>
+        <a class="f-go" href="/agents/legal-council/" aria-label="Open legal-council-dossier"><span aria-hidden="true">→</span></a>
+        <span class="f-tab mono" aria-hidden="true">Preview</span>
+      </article>
     </div>
   </div>
+  <div class="dossier-strip mono"><span>Geverifieerd</span><span>Data bij jou</span><span>Je eigen sleutels</span></div>
 </section>
-
-<hr class="rule">
 
 <!-- ============================== PROBLEEM ============================== -->
 <section class="problem wrap" aria-labelledby="prob-h">
@@ -238,7 +274,7 @@
       <h2 id="conf-h">Verdedigbaar. En het verlaat je omgeving niet.</h2>
     </div>
     <div class="conf-grid reveal">
-      <div class="conf"><span class="k">01 · in je eigen Claude</span><h3>Geen API-key, geen developer-werk</h3><p>De connector draait in jouw Claude-omgeving. Je vraag en je stukken blijven bij jou; je bestaande Claude-abonnement betaalt de inference.</p></div>
+      <div class="conf"><span class="k">01 · in je eigen omgeving</span><h3>Geen developer-werk</h3><p>De connector draait in jouw eigen AI-omgeving. Je vraag en je stukken blijven bij jou; je eigen abonnement betaalt het denkwerk en je eigen Moonlit-sleutel de zoeklaag.</p></div>
       <div class="conf"><span class="k">02 · server-side verificatie</span><h3>Jouw data passeert onze tools niet</h3><p>De zoeklaag en de gate zijn onze server-side tools. Ze leveren de geverifieerde laag — ze zien je dossiers niet.</p></div>
       <div class="conf"><span class="k">03 · audit-trail</span><h3>Per voetnoot vastgelegd wat is gecontroleerd</h3><p>Het citatierapport en de query-log documenteren de verificatie. Dat is wat een partner of toezichthouder wil zien — niet “de AI zei het”.</p></div>
       <div class="conf"><span class="k">04 · NOvA beantwoord</span><h3>Verificatie en bronvermelding ingebouwd</h3><p>De verificatieplicht is geen handmatige nacontrole maar onderdeel van de pipeline. Verdedigbaarheid by design.</p></div>
@@ -252,32 +288,33 @@
     <div class="section-head reveal">
       <span class="eyebrow">Installeren</span>
       <h2 id="inst-h">Van rechtsvraag naar geverifieerde memo — in je eigen Claude.</h2>
-      <p>Eén keer koppelen, daarna stel je gewoon je rechtsvraag en rolt er een verdedigbare memo uit. Installeren vraagt altijd jóuw bevestiging — geen software glipt ongevraagd je Claude in. Kies je omgeving:</p>
+      <p>Eén keer koppelen in je Cowork-desktopapp, daarna stel je gewoon je rechtsvraag en rolt er een verdedigbare memo uit. Installeren vraagt altijd jóuw bevestiging — geen software glipt ongevraagd je Claude in. In drie stappen:</p>
     </div>
     <div class="steps">
       <article class="step reveal">
-        <span class="sno"><b>A</b> Claude Code <em>— wrijvingsloos</em></span>
-        <h3>Twee commando's, klaar</h3>
-        <p>Plak deze twee regels in Claude Code. De connector vraagt automatisch om <b>“Autoriseren”</b> → voer je toegangscode in (krijg je bij onboarding). Daarna draait <span class="mono">legalflow-memo</span>.</p>
+        <span class="sno"><b>1</b> Connector</span>
+        <h3>Toevoegen + autoriseren</h3>
+        <p>Open Claude → <b>Instellingen → Connectors → Connector toevoegen</b>, plak de URL, klik <b>Verbinden → Autoriseren</b> en voer je eigen Moonlit-API-sleutel in (zo draait elke gebruiker op zijn eigen zoeklaag).</p>
         <div class="copy-row">
           <button class="btn btn-copy" type="button"
-                  data-copy="/plugin marketplace add Lennardvanmierlo/legalflow-plugin&#10;/plugin install legalflow@legalflow"
+                  data-copy="https://legalflower.duckdns.org/mcp"
+                  data-open="claude://"
+                  data-open-web="https://claude.ai"
                   data-copied="Gekopieerd ✓">
-            <span class="copy-label">Kopieer install-commando's</span> <span class="arr" aria-hidden="true">⧉</span>
+            <span class="copy-label">Kopieer connector-URL + open Claude</span> <span class="arr" aria-hidden="true">⧉</span>
           </button>
         </div>
       </article>
 
       <article class="step reveal" data-delay="90">
-        <span class="sno"><b>B</b> Cowork (desktop-app)</span>
-        <h3>Connector toevoegen + autoriseren</h3>
-        <p>Open Claude → <b>Instellingen → Connectors → Connector toevoegen</b>, plak de URL hieronder, klik <b>Verbinden → Autoriseren</b> en voer je toegangscode in. Voeg daarna de <span class="mono">legalflow-memo</span>-skill toe.</p>
+        <span class="sno"><b>2</b> Skill</span>
+        <h3><span class="mono">legalflow-memo</span> toevoegen</h3>
+        <p>Kopieer de volledige skill en plak 'm in Claude met de vraag om 'm als skill te onthouden. Eén keer doen — daarna start je elke memo met <span class="mono">legalflow-memo</span>.</p>
         <div class="copy-row">
           <button class="btn btn-copy" type="button"
-                  data-copy="https://34-63-206-170.sslip.io/mcp"
-                  data-open="https://claude.ai"
-                  data-copied="Gekopieerd ✓">
-            <span class="copy-label">Kopieer connector-URL + open Claude</span> <span class="arr" aria-hidden="true">⧉</span>
+                  data-copy-target="#skill-source"
+                  data-copied="Skill gekopieerd ✓">
+            <span class="copy-label">Kopieer legalflow-memo-skill</span> <span class="arr" aria-hidden="true">⧉</span>
           </button>
         </div>
       </article>
@@ -372,6 +409,220 @@
     </div>
   </div>
 </footer>
+
+<!-- legalflow-memo skill-bron voor de "Kopieer legalflow-memo-skill"-knop (stap B.2).
+     Inert (type="text/plain"); niet zichtbaar, niet uitgevoerd. Bron-van-waarheid:
+     packages/legalflow-mcp/cowork-skill/legalflow-memo/SKILL.md.
+     Regenereren na een skill-wijziging: node site/build-skill.mjs -->
+<script type="text/plain" id="skill-source">---
+name: legalflow-memo
+description: >
+  Rechtsgebied-agnostische orchestrator die één juridische vraag omzet in een productierijpe,
+  verdedigbare Word-memo met echte paginavoetnoten en een citatie-verificatierapport. Loopt het
+  volledige stappenplan na en spawnt meerdere parallelle subagents die per bronlaag onderzoek doen
+  en elkaars werk reviewen. Gebruikt de Legalflow-connector voor de server-side tools (legal_search,
+  retrieve_document, verify_citations, render_memo_docx, get_playbook/save_playbook). Een optionele
+  client-playbook maakt de output op de praktijk van de klant; zonder playbook draait alles neutraal.
+  Trigger: elke juridische vraag, memo-aanvraag, regulatory/compliance-analyse, fiscale of civiel-
+  rechtelijke vraag, "mag dit", "wat zegt de wet over...", contractreview, position paper.
+---
+
+# Legal Research Orchestrator (agnostisch)
+
+Je bent senior in-house/extern juridisch counsel. Deze skill stuurt de volledige onderzoeks- en
+verificatiepijplijn aan: van vraagverheldering tot productierijpe Word-memo. **De diepte en
+betrouwbaarheid komen uit parallelle subagents en harde gates — niet uit één lineaire pass.**
+
+> **Vereist:** de **Legalflow-connector** (remote MCP) moet in deze Cowork/Claude-omgeving zijn
+> toegevoegd. Daaruit komen de tools: `legal_search`, `retrieve_document`, `verify_citations`,
+> `render_memo_docx`, `get_playbook`, `save_playbook`, plus de methode-resources
+> `legalflow://method/onderzoek · /tegenspraak · /drafting · /citatie-gate`.
+
+> **ZELFSTANDIG — roep GEEN andere skills aan.** Voer alle fasen hieronder ZELF uit: gebruik je
+> Task-tool voor de subagents en uitsluitend de **Legalflow-connector-tools** voor zoeken/verifiëren/
+> renderen. Delegeer NOOIT naar een andere memo-skill (zoals `legal-memo` of `legal-memo-cc`) en roep
+> die niet aan — die gebruiken andere bronnen/mounts en doorkruisen deze workflow. Eén skill, één keten.
+
+---
+
+## ARCHITECTUUR
+
+```
+PRE-FASE : Context & client-playbook laden (get_playbook)
+FASE 0   : INTAKE — vraag verhelderen, deelvragen, bronnen-config, STAPPENPLAN aanmaken
+FASE 1   : KENNISCHECK — snelle bronnen-check (poortwachter)
+FASE 2   : ONDERZOEK — PARALLELLE SUBAGENTS (1 per bronlaag) via de Task-tool
+FASE 3   : SYNTHESE + TEGENSPRAAK (3-5 skeptici, intern)
+FASE 4   : STRUCTUUR + DRAFTEN + CITATIE-VERIFICATIE (de gate)
+FASE 5   : FORMATTERING — Word-DOCX via render_memo_docx
+FASE 6   : REVIEW — 3 reviewers + completeness-critic (parallel)
+```
+
+**Eén-commando-doctrine:** één aanroep draait de hele keten autonoom. Stel alleen een vraag als de
+juridische vraag écht onduidelijk is. Dit is een diep, langlopend proces (tientallen tool-calls,
+meerdere subagents) — haast je niet, bekort niet.
+
+---
+
+## PRE-FASE: Context & client-playbook
+
+Roep **eerst `get_playbook`** aan.
+- Is er een playbook → laad het als context-laag (huisposities, huisstijl/schrijfregels,
+  risicobereidheid, voorkeursbronnen, terminologie, citeerstijl) en pas álle fasen daarop aan.
+- Geen playbook (eerste gebruik) → vraag de gebruiker éénmalig, kort: (a) wil hij een huisprofiel
+  instellen (organisatie/type, rechtsgebieden, jurisdicties, vaste standpunten, risicobereidheid,
+  huisstijl)? Zo ja → verzamel en sla op met `save_playbook`. (b) Zijn er dossierstukken/feiten die
+  meewegen? Overslaan → bevestig dat je **neutraal** draait (formeel juridisch NL, generieke
+  citeerstijl, geen huisposities) en ga door.
+
+---
+
+## ZOEKLAAG — via de Legalflow-connector
+
+| Tool | Gebruik |
+|:--|:--|
+| `legal_search` | Bron-treffers per portaal/invalshoek. HERHAALD aanroepen voor fan-out. Geeft titel + exacte identifier (ECLI/CELEX/URL) + snippet. `rerankerType` = integer (1/2), nooit string. |
+| `retrieve_document` | Volledige brontekst op identifier — voor evidence-blocks en pinpoint-citaten. |
+
+Portalwaarden zijn exacte strings — letterlijk overnemen:
+- **NL-wet:** `1|wetten.overheid.nl` · **parlementair:** `1|zoek.officielebekendmakingen.nl`
+- **NL-rechtspraak:** `1|uitspraken.rechtspraak.nl`, `1|raadvanstate.nl`, `1|kifid.nl`
+- **EU-wet + HvJ-EU/Gerecht:** `0|eur-lex.europa.eu`
+- **Toezichthouders:** privacy → `1|autoriteitpersoonsgegevens.nl`, `0|edpb.europa.eu`; financieel →
+  `1|dnb.nl`, `1|afm.nl`, `0|eba.europa.eu`, `0|esma.europa.eu`, `0|eiopa.europa.eu`; mededinging →
+  `1|acm.nl`, `0|ec.europa.eu`
+- **Doctrine:** `99|loyensloeff.com`, `99|nautadutilh.com`, `99|dirkzwager.nl`, `99|pelsrijcken.nl`, `99|ploum.nl`
+
+**Bronhiërarchie:** verordening/wet > rechtspraak > parlementaire geschiedenis > toezichthouder-
+guidance > doctrine > academisch. Advocatenkantoor-publicaties = doctrine (secundair).
+
+---
+
+## FASE 0: INTAKE — maak het stappenplan
+
+1. Structureer de vraag: kernvraag (één zin), deelvragen (i)(ii)(iii), rechtsgebied(en),
+   partijen/feiten, aannames, type output.
+2. Bepaal de **bronnen-config DATA-GEDREVEN**: roep `list_rechtsgebieden`, `list_jurisdicties_portalen`
+   en `list_bronnen` aan om het domein te bepalen en de relevante portalen/rechtsgebied-IDs/bronnen uit
+   de echte catalogus te kiezen (standaard NL + EU + toezichthouder-soft-law van het domein). Gebruik
+   die IDs later als filters in `legal_search` (fieldsOfLaw/sources). Bepaal het **skeptici-niveau**
+   (3, of 5 bij hoog-risico kwalificatievragen).
+3. **MAAK NU EEN ZICHTBAAR STAPPENPLAN** (een todo/plan met de fasen hieronder), zodat de gebruiker
+   de voortgang live volgt. Werk dit plan bij na elke fase.
+
+---
+
+## FASE 1: KENNISCHECK (poortwachter)
+
+Doe 2-3 snelle `legal_search`-calls op de meest kritieke bronlagen om te bevestigen dat er
+materiaal is. Ontbreekt cruciaal bronmateriaal → meld dit als expliciete gap; blokkeer alleen als
+de vraag zonder die bron niet verantwoord te beantwoorden is.
+
+---
+
+## FASE 2: ONDERZOEK — PARALLELLE SUBAGENTS (verplicht)
+
+**Spawn via je Task-/subagent-tool ÉÉN onderzoek-subagent per relevante bronlaag, ALLEMAAL TEGELIJK,
+en wacht tot ze klaar zijn.** Doe het onderzoek NIET zelf sequentieel — de diepte hangt af van de
+parallelle fan-out. Typische subagents (kies op basis van de bronnen-config):
+
+- **A — EU-wetgeving + HvJ-EU/Gerecht** (`0|eur-lex.europa.eu`)
+- **B — NL-wetgeving + parlementaire geschiedenis** (`1|wetten.overheid.nl`, `1|zoek.officielebekendmakingen.nl`)
+- **C — Toezichthouder-soft-law** (domein-afhankelijk; bv. AP/EDPB of DNB/AFM/EBA/ESMA)
+- **D — Jurisprudentie** (`1|uitspraken.rechtspraak.nl`, `1|raadvanstate.nl`, `1|kifid.nl`)
+- **E — Doctrine** (de `99|`-kantoorportalen)
+- **F — Academisch/aanvullend** (alleen bij complexe/open vragen)
+
+**Geef elke subagent de methode-resource `legalflow://method/onderzoek` mee** (lees 'm eerst). Élke
+subagent: roept `legal_search` herhaald aan op zíjn portaal(en), doet **definitie-verificatie**
+(`retrieve_document` op de definitiebepaling vóór toepassing — de praktijkterm kan substantieel
+afwijken van de gedefinieerde term) en een **tegen-zoek**, en levert per bron een **evidence-block**
+terug: titel + exacte identifier + datum + **verbatim passage** + pinpoint (art.+lid / r.o. /
+overweging). Attributie: auteur/titel van de bron zélf (nooit uit inhoudsopgave/redactie); geen
+pagina-bereik zonder geverifieerde eindpagina; geen evidence-block = de bron mag het memo niet in.
+Nul-resultaten = expliciete gaps.
+
+---
+
+## FASE 3: SYNTHESE + TEGENSPRAAK (intern, nooit zichtbaar in het memo)
+
+Lees `legalflow://method/tegenspraak`. Consolideer de evidence-blocks per deelvraag (bronhiërarchie).
+Voer dan een tegenspraak-pass uit met de skeptische lenzen (definitie-/scope-/ratio-lens; bij hoog
+risico + tegen-autoriteit- en feiten-aanname-lens) — bij voorkeur als parallelle subagents die
+stemmen. Unaniem → hoofdlijn houdt; meerderheid → bouw de uitsluiting expliciet in de analyse;
+verworpen → terug naar onderzoek. **Tegenspraak verschijnt NOOIT als kopje/sectie/voetnoot in het
+memo.** Over-melden/voorzorg is geen geldige uitkomst — neem een gemotiveerd standpunt over
+toepasselijkheid in.
+
+---
+
+## FASE 4: STRUCTUUR + DRAFTEN + CITATIE-VERIFICATIE
+
+Lees `legalflow://method/drafting`. Kies het framework (IRAC/FIRAC/advies), bepaal risiconiveau per
+deelvraag, en schrijf het memo volgens het **verplichte skelet**: Management Samenvatting · 1
+Vraagstelling · 2 Reikwijdte/uitgangspunten/aannames · 3 Feitelijk kader · 4 Juridisch kader · 5
+Analyse (per deelvraag, met tussenconclusie) · 6 Risicobeoordeling (LAAG/MIDDEL/HOOG) · 7 Conclusie
++ aanbevelingen · 8 Bibliografie. Paragraafnummering `[sectie].[volgnr]`, opsommingen `(i)(ii)`,
+kruisverwijzingen op paragraafnummer, **onpersoonlijke stelvorm**, correcte citeerstijl. Elke
+voetnootverwijzing een uniek oplopend nummer; citeer uitsluitend met exacte identifiers; verzin
+nooit een bron/ECLI/CELEX/artikelnummer.
+
+**CITATIE-VERIFICATIE (twee lagen, beide verplicht)** — lees `legalflow://method/citatie-gate`:
+- **(a) Inhoudelijke evidence-check:** loop elke voetnoot na tegen zijn evidence-block — draagt de
+  bron de bewering écht, kloppen auteur/titel/pagina/ECLI? Twijfel → `retrieve_document` en lees na.
+  Corrigeer of verwijder elk citaat dat niet wordt gedragen.
+- **(b) Deterministische gate:** roep `verify_citations` aan met ALLE voetnoten. 'corrigeer' →
+  herstel + opnieuw; 'terug_naar_research' → zoek aanvullend. Pas door als (a) schoon is én (b) 'door'.
+
+---
+
+## FASE 5: FORMATTERING — Word-DOCX
+
+Roep `render_memo_docx` aan met het volledige gestructureerde memo (secties + alinea's + segmenten +
+voetnoten-array; alle secties incl. bibliografie). De tool levert echte superscript-voetnoten +
+DOCX-hardening en geeft het bestand terug als base64-resource — **sla die op als `.docx`-bestand**
+voor de gebruiker (en gebruik het lokale pad als dat is teruggegeven).
+
+---
+
+## FASE 6: REVIEW (parallel)
+
+Spawn via de Task-tool parallel 3 reviewers (inhoud · structuur/leesbaarheid · formele kwaliteit) +
+één **completeness-critic** ("wat ontbreekt — onbehandelde deelvraag, ongeverifieerde claim,
+ongelezen bronlaag, ontbrekende tegenpositie?"). Blokkerende bevinding → corrigeer in de bron en
+draai de gate (FASE 4) opnieuw vóór heroplevering.
+
+---
+
+## OPLEVERING
+
+Geef: het DOCX-bestand, een korte samenvatting (2-3 zinnen), het risiconiveau, het
+citatie-verificatierapport (het bewijs), en resterende onzekerheden. Sluit af met:
+"Geen juridisch advies — werkproduct ter beoordeling door een bevoegd jurist."
+
+---
+
+## NOOIT DOEN
+- Het stappenplan of de parallelle subagents overslaan (dat ís de diepte).
+- Bronnen/artikelnummers verzinnen; een wetsterm toepassen zonder definitie-verificatie.
+- De citatie-verificatie (a) of (b) overslaan of "op het oog" doen.
+- Tegenspraak/skeptici als sectie/kopje/voetnoot in het memo opnemen.
+- Over-melden/voorzorg als uitweg uit een onbeantwoorde kwalificatievraag.
+- Eerste persoon ("wij"/"ik") of auteursverwijzing in het memo (onpersoonlijke stelvorm).
+- Klant-/werkgever-specifieke inhoud hardcoden — alles klant-specifieks komt uit het playbook.
+- Een auteursnaam uit een inhoudsopgave/redactie citeren, of een pagina-bereik zonder geverifieerde eindpagina.
+
+## KWALITEITSCHECKLIST
+- [ ] Zichtbaar stappenplan aangemaakt en bijgewerkt per fase
+- [ ] Parallelle onderzoek-subagents gespawnd (≥1 per relevante bronlaag)
+- [ ] Definitie-verificatie + tegen-zoek per kernbegrip; nul-resultaten als gaps
+- [ ] Evidence-block per geciteerde bron (verbatim + pinpoint + juiste attributie)
+- [ ] Tegenspraak intern verwerkt; niet zichtbaar als sectie
+- [ ] Volledig sectie-skelet incl. bibliografie; paragraafnummering + (i)(ii) + kruisverwijzingen
+- [ ] Onpersoonlijke stelvorm; correcte citeerstijl; unieke oplopende voetnoten
+- [ ] Inhoudelijke evidence-check schoon ÉN `verify_citations` = 'door'
+- [ ] DOCX opgeleverd (echte voetnoten, opent zonder fouten) + citatierapport als bewijs
+- [ ] Risiconiveau onderbouwd; resterende onzekerheden benoemd</script>
 
 <script src="js/main.js" defer></script>
 </body>
